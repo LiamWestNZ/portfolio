@@ -1,0 +1,88 @@
+//theme
+$blue:#5680E9;
+$black: #292929;
+$bg: #191919;
+$lines: #757474;
+
+
+$small: 500px;
+$medium: 800px;
+$large: 1200px;
+$extralarge: 1600px;
+
+@mixin ease-in-out($speed){
+    transition: all $speed ease-in-out;
+}
+
+@mixin width {
+    @media (min-width: $medium) {
+      width: 80%;
+    }
+    @media (max-width: $medium) {
+      width: 85%;
+    }
+    @media (max-width: $small) {
+      width: 90%;
+    }
+  }
+
+@mixin inputFocusEffect {
+  box-shadow: 0 0 0 0 transparent;
+  &:focus {
+    outline: 2px solid lightblue;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px $blue;
+    &::placeholder {
+      color: $bg
+    }
+  }
+  &::placeholder {
+    color: $lines;
+    @include ease-in-out(200ms);
+  }
+}
+
+@mixin skills {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+@mixin animation($animate...){
+  $max: length($animate);
+  $animations: '';
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
