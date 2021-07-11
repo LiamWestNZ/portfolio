@@ -2,7 +2,13 @@ import React from 'react'
 import Content from '../layout/Content'
 
 
+
+
+
+
 const About = (props) => {
+
+    
     
     return (
         <section id="about" ref={props.aboutRef}>

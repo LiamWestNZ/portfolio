@@ -1,7 +1,7 @@
 import React ,{useRef, useMemo} from 'react';
 import {Canvas, useFrame} from '@react-three/fiber';
 import * as THREE from 'three';
-import {BoxBufferGeometry, MeshStandardMaterial} from 'three';
+
 
 
 
@@ -16,12 +16,12 @@ export function Stars(props){
         group.current.rotation.set(r, r, r)
         group.current.scale.set(s, s, s)
     })
-    const [geo, mat, coords] = useMemo(() => {
-        const geo = new THREE.SphereBufferGeometry(1, 10, 10)
-        const mat = new THREE.MeshBasicMaterial({ color: new THREE.Color('lightblue') })
-        const coords = new Array(2000).fill().map(i => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400])
-        return [geo, mat, coords]
-    }, [])
+    
+        const geo = useMemo(()=> new THREE.SphereBufferGeometry(1, 10, 10),[])
+        const mat = useMemo(()=> new THREE.MeshBasicMaterial({ color: new THREE.Color('lightblue') }),[])
+        const coords = useMemo(()=> new Array(2000).fill().map(i => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400]),[])
+    
+    
     return (
         <group ref={group}>
         {coords.map(([p1, p2, p3], i) => (

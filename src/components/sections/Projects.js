@@ -10,7 +10,7 @@ import {images} from '../../util/image'
 
 const Projects = (props) => {
 
-        const {setIsModalOpen, setModalInfo} = props
+    const {setIsModalOpen, setModalInfo} = props
     
     const litterTech = ['HTML','CSS','JavaScript','React','Python','SQLite']
     const hsTech = ['HTML','SASS','JavaScript','React','Python','PostgreSQL','Redux','AWS']

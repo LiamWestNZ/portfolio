@@ -47,6 +47,16 @@ div.modal{
         background-color: white;
         overflow-y: auto;
         overflow-x: hidden;
+        .close{
+          display: flex;
+          justify-content: flex-end;
+          
+          svg{
+            fill: $blue;
+            height: 70px;
+            width: 70px;
+          }
+        }
     }
     .content{
         padding: 20px;
@@ -72,7 +82,7 @@ div.modal{
             @media screen and (min-device-width: 1200px) and (max-device-width: 1700px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
                 margin: 0 0 calc(18px)
             }
-        }
+        
         .left{
             position: absolute;
             left: 0;
@@ -90,6 +100,11 @@ div.modal{
             cursor: pointer;
             user-select: none;
             padding: 30px;
+            svg{
+              fill: $blue;
+              height: 70px;
+              width: 70px;
+            }
         }
         .right{
             position: absolute;
@@ -108,7 +123,13 @@ div.modal{
             cursor: pointer;
             user-select: none;
             padding: 30px;
+            svg{
+              fill: $blue;
+              height: 70px;
+              width: 70px;
+            }
             
+          }
         }
         .images{
             height: 100%;
@@ -134,15 +155,22 @@ div.modal{
             }
         }
         .title{
+            font-size: 2em;
+            color: $blue;
             margin: auto;
             position: relative;
-            
             text-align: center;
 
         }
         .description{
+            
             position: relative;
             margin: auto;
+            p{
+              color: #4a4a4a;
+              font-size: 1.75em;
+            }
+            
             
         }
         .technologies-wrapper{
@@ -150,7 +178,19 @@ div.modal{
             margin: auto;
             
             ul{
-                list-style: square;
+                list-style: none;
+                color: #4a4a4a;
+                font-size: 1.75em;
+                li{
+                  &::before{
+                    content: "\2022";  
+                    color: $blue; 
+                    font-weight: bold; 
+                    display: inline-block; 
+                    width: 1em; 
+                    margin-left: -1em; 
+                  }
+                }
             }
         }
     }
@@ -168,7 +208,7 @@ div.content {
 main{
     position: relative;
     section#about{
-      padding-top: 20em;
+      padding-top: 5em;
         .content{
             position: relative;
             h1{

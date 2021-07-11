@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import CarouselImage from './CarouselImage';
+import { RightArrow, LeftArrow } from '../../util/image';
 
 
 
@@ -56,11 +57,11 @@ export function Carousel(props){
     ))
     return (
         <div className="carousel" style={{height: carouselHeight}}>
-            <div onClick={previousImage} className="left">L</div>
+            <div onClick={previousImage} className="left"><LeftArrow/></div>
             <div className="image">
                 {displayCarousel}
             </div>
-            <div onClick={nextImage} className="right">R</div>
+            <div onClick={nextImage} className="right"><RightArrow/></div>
         </div>
     )
 }

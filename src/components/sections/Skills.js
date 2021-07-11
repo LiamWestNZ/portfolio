@@ -7,6 +7,8 @@ import SkillsWrapper from '../layout/SkillsWrapper'
 
 export function Skills(props){
 
+    
+
     return (
         <section id="skills" ref={props.skillsRef}>
             

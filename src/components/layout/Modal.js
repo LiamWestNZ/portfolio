@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import RenderCarousel from './RenderCarousel';
 import {onModalClose} from '../../util';
 
+import { ExitIcon } from '../../util/image';
+
 
 export function Modal({show, setIsModalOpen, modalInfo, viewport}){
     
@@ -17,7 +19,7 @@ export function Modal({show, setIsModalOpen, modalInfo, viewport}){
                 setIsModalOpen(false);
                 onModalClose();
             
-            }} className="close">XXXXX</div>
+            }} className="close"><ExitIcon/></div>
             
             <div className="content">
                 <div className="images">

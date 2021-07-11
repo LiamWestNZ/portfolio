@@ -13,12 +13,12 @@ export function Navbar(props){
 
 
     useEffect(()=>{
-        if(props.activeRef){
-            setIsVisible(true)
-        }else{
+        if(props.isTop){
             setIsVisible(false)
+        }else{
+            setIsVisible(true)
         }
-    },[props.activeRef])
+    },[props.isTop])
 
     return(
         <>
@@ -59,7 +59,7 @@ export function Navbar(props){
         
         </>
         ): (
-            <nav className="responsive-nav-desktop" style={{visibility: isVisible ? 'visible' : 'hidden'}} >
+            <nav className="responsive-nav-desktop" style={{visibility: isVisible ? 'visible' : 'hidden', height: isVisible ? '10%' : '0%'}} >
                 <div className="progress" style={{width: `${props.progress}%`}}></div>
                 <ul className="container" >
                     <li className="left">
@@ -72,27 +72,38 @@ export function Navbar(props){
                     <li classNmae="right">
                         <ul>
                             <li>
-                                <AnchorLink>
+                                <AnchorLink
+                                href="#home"
+                                className={props.activeRef === 0 ? "anchor active" : "anchor"}>
                                     Home
                                 </AnchorLink>
                             </li>
                             <li>
-                                <AnchorLink>
+                                <AnchorLink
+                                href="#about"
+                                className={props.activeRef === 1 ? "anchor active" : "anchor"}>
                                     About
                                 </AnchorLink>
                             </li>
                             <li>
-                                <AnchorLink>
+                                <AnchorLink
+                                href="#skills"
+                                className={props.activeRef === 2 ? "anchor active" : "anchor"}>
                                     Skills
                                 </AnchorLink>
                             </li>
                             <li>
-                                <AnchorLink>
+                                <AnchorLink
+                                href="#projects"
+                                className={props.activeRef === 3 ? "anchor active" : "anchor"}>
                                     Projects
                                 </AnchorLink>
                             </li>
                             <li>
-                                <AnchorLink>
+                                <AnchorLink
+                                offset="50"
+                                href="#contact"
+                                className={props.activeRef === 4 ? "anchor active" : "anchor"}>
                                     Contact
                                 </AnchorLink>
 
