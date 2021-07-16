@@ -12,9 +12,11 @@ export function ProjectCard(props){
         techList,
         setModalInfo,
         setIsModalOpen,
+        image,
+        bgColor
         } = props
     
-
+    
     return (
         <li>
             <div className="project-card"
@@ -35,12 +37,16 @@ export function ProjectCard(props){
                     }
                 }
             >
-                <div className="image">
-                    <ImageContainer />
-                </div>
-                <div className="text">
-                    <p className="title">{title}</p>
-                    <p className="description">{description}</p>
+                <div className="item-wrapper">
+                    <div className="image">
+                        <div className="image-wrapper" style={{backgroundColor: bgColor}}>
+                            {image === 'Litter.' ? 'Litter.' :  <img src={image} height="200px" width="200px"></img>}
+                        </div>
+                    </div>
+                    <div className="content">
+                            <div className="title">{title}</div>
+                            <div className="description">{description}</div>
+                    </div>
                 </div>
             </div>
         </li>

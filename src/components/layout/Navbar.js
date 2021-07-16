@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import logo from '../../logo.svg'
+
+
 import './Navbar.scss';
 
 
@@ -28,20 +29,13 @@ export function Navbar(props){
                 <ul className={navOpen ? 'active' : ''}  >
                     <li className="left">
                         <ul>
-                            <li className="logo">
-                                <h1>Liam West</h1>
-                            </li>
-                        </ul>
-                    </li>
-                     <li className="right">
-                        <ul>
-                            <li
+                        <li className="logo"
                             onClick={() => {
-                                setNavOpen(true)
+                                setNavOpen(!navOpen)
                             }}>
-                            <figure>
-                                <img src={logo} height="40px" width="40px" alt="logo-nav-toggler"/>
-                            </figure>
+                                <div className="logo-container" height="40px" width="40px">
+                                        LW
+                                </div>
                             </li>
                         </ul>
                     </li>
@@ -50,7 +44,7 @@ export function Navbar(props){
             <nav className="responsive-nav-mobile-full" style={{left: navOpen ? "0" : "-100%", pointerEvents: navOpen ? "auto" : "none"}}>
                 <ul>
                     <li onClick={()=>{
-                        setNavOpen(false);
+                        setNavOpen(!navOpen);
                     }} className="exit-icon">
                         <h1>X</h1>
                     </li>
@@ -65,7 +59,19 @@ export function Navbar(props){
                     <li className="left">
                         <ul>
                             <li className={props.activeRef === 0 ? "active logo" : "logo"}>
-                                <h1>Liam West</h1>
+                                <AnchorLink href="#header">
+                                    <div className="logo-container">
+                                        LW
+                                    </div>
+                                </AnchorLink>
+                            </li>
+                            <li className="divider">
+                                <div></div>
+                            </li>
+                            <li className="name">
+                                <div>
+                                    Liam West
+                                </div>
                             </li>
                         </ul>
                     </li>
@@ -73,7 +79,7 @@ export function Navbar(props){
                         <ul>
                             <li>
                                 <AnchorLink
-                                href="#home"
+                                href="#header"
                                 className={props.activeRef === 0 ? "anchor active" : "anchor"}>
                                     Home
                                 </AnchorLink>

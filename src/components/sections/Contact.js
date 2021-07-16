@@ -3,7 +3,9 @@ import Content from '../layout/Content';
 import ContactIconWrapper from '../layout/ContactIconWrapper';
 import ContactIcon from '../layout/ContactIcon';
 
-import { SendMailIcon, LinkedInIcon, GithubIcon, EmailIcon } from '../../util/image';
+
+import { SendMailIcon, LinkedInIcon, GithubIcon, EmailIcon} from '../../util/image';
+import {encode} from '../../util/index';
 
 
 export function Contact(props){
@@ -46,7 +48,37 @@ export function Contact(props){
 
                         </ContactIconWrapper>
                     </div>
-                    <form>
+                    <form
+                        id="contactForm"
+                        className="contact"
+                        method="POST"
+                        data-netlily="true"
+                        data-netlify-honeypot="bot-field"
+                        onSubmit={(e)=>{
+                            e.preventDefault();
+
+                            let formData={
+                                yourname: yourname,
+                                email: email,
+                                message: message,
+                            };
+
+                            fetch("/form",{
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                },
+                                body: encode({"form-name": "contact", ...formData}),
+                            })
+                                .then(()=>{
+                                    alert("Message Sent!")
+                                    setEmail("")
+                                    setYourname("")
+                                    setMessage("")
+                            })
+                                .catch((error)=> alert(error))
+                        }}
+                        >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={`input-wrapper input ${
                                     yourname.length > 0 ? "filled" : ""}`}>

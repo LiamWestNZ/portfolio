@@ -12,7 +12,7 @@ import {scaleSwitch,
 
 
 export function CarouselImage(props){
-    console.log("props from ci" + props)
+    
 
     return (
         <div className="carousel-image"

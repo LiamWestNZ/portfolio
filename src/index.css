@@ -23,9 +23,4 @@ code {
 ::-webkit-scrollbar-track {
   background: #F4F4F4; }
 
-html,
-body,
-.app{
-  position: relative;
-  min-height: 100vh;
-}
+

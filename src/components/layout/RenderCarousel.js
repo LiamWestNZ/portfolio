@@ -6,7 +6,7 @@ import Carousel from './Carousel'
 
 export function RenderCarousel(props){
 
-    const {modalInfo, isModalOpen} = props
+    const {modalInfo, isModalOpen, viewport} = props
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(()=>{
@@ -18,7 +18,7 @@ export function RenderCarousel(props){
 
     if(isMounted && modalInfo){
         return (
-            <Carousel isModalOpen={isModalOpen} images={modalInfo.images} viewport={props.viewport}/>
+            <Carousel isModalOpen={isModalOpen} images={modalInfo.images} viewport={viewport}/>
         )
         } else {
             return <><h1>Test</h1></>

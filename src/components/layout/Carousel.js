@@ -9,7 +9,7 @@ import { RightArrow, LeftArrow } from '../../util/image';
 export function Carousel(props){
 
     const [imageList, setImageList] = useState([0,1,2,3,4])
-    console.log(imageList)
+    
     
     const carouselHeight = ((Math.min(props.viewport / 2, 800) * 9) / 16) * 0.8;
     const nextImage = () => {

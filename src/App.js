@@ -29,10 +29,11 @@ export function App() {
     setIsTop(window.scrollY < (0.7 * window.innerHeight));
   };
 
-  const checkMobileDebounced = debounce(checkIfMobile, 500, true);
+  const checkMobileDebounced = debounce(checkIfMobile, 1000, true);
 
   useEffect(() => {
     checkIfMobile();
+    
   });
 
   const calcPercentDebounced = debounce(
@@ -60,10 +61,10 @@ export function App() {
     <div className="App">
       <Navbar isMobile={isMobile} progress={progress} activeRef={activeRef} isTop={isTop}/>
       <div className="canvas-wrapper"activeRef={activeRef}>
-        <Canvas colorManagement camera={{position: [-5,2,50]}}>
+        <Canvas resize={{scroll: true}} colorManagement camera={{position: [-5,2,50]}}>
           <HeaderContent/>
           <ambientLight intensity={0.5} />
-          <Stars/>
+          <Stars />
         </Canvas>
       </div>
       
@@ -79,12 +80,23 @@ export function App() {
 }
 
 
-export function HeaderContent(){
+export function HeaderContent(props){
 
+  const [isTop, setIsTop] = useState(false);
+
+  const smoothTextSroll =()=>{
+    setIsTop(300 + (0.3 * window.scrollY));
+  }
+
+  const smoothTextScrollDebounce = debounce(smoothTextSroll, 1000, true);
+
+  useEffect(()=>{
+    smoothTextScrollDebounce();
+  })
   return (
     
       <Html fullscreen>
-        <section className="header">
+        <section id="header" className="header">
           <Content>
             <div className="splash">
                     <div className="splash-logo">
@@ -102,9 +114,9 @@ export function HeaderContent(){
                         </svg>
                     </div>
                 </div>
-                <div className="text">
-                    <p className="title">Hi my name is Liam.</p>
-                    <p className="second">I'm a fullstack developer and IT specialist</p>
+                <div className="text" style={{top: `${isTop}px`}}>
+                    <p>Hi my name is Liam.</p>
+                    <p>I'm a fullstack developer and IT specialist</p>
                 </div>
                 </Content>
               </section>
