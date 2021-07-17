@@ -48,7 +48,7 @@ export function Contact(props){
 
                         </ContactIconWrapper>
                     </div>
-                    <form
+                    <form netlify
                         id="contactForm"
                         className="contact"
                         method="POST"
