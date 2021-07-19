@@ -5,6 +5,7 @@ import {onModalOpen} from '../../util';
 export function ProjectCard(props){
     const { 
         description,
+        full,
         title, 
         images,
         github,
@@ -13,6 +14,7 @@ export function ProjectCard(props){
         setModalInfo,
         setIsModalOpen,
         image,
+        tags,
         bgColor
         } = props
     
@@ -23,7 +25,7 @@ export function ProjectCard(props){
                 onClick={() =>{
                     setModalInfo(()=>{
                         return {
-                            description: description,
+                            description: full,
                             title: title,
                             images: images,
                             github: github,
@@ -46,8 +48,15 @@ export function ProjectCard(props){
                     <div className="content">
                             <div className="title">{title}</div>
                             <div className="description">{description}</div>
+                        
                     </div>
                 </div>
+                View More!
+                <ul className="tags">
+                            {tags.map((tag, index) => (
+                                <li key={index}>{tag}</li>
+                            ))}
+                        </ul>
             </div>
         </li>
         )
