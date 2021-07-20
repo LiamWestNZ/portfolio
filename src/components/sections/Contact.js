@@ -89,6 +89,9 @@ export function Contact(props){
                         }}
                         >
                         <input type="hidden" name="form-name" value="contact" />
+                        <div hidden>
+                            <input name="bot-field"/>
+                        </div>
                         <div className={`input-wrapper input ${
                                     yourname.length > 0 ? "filled" : ""}`}>
                                     <label htmlFor="yourname">Your Name</label>
