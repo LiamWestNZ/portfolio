@@ -11,6 +11,7 @@ export function Navbar(props){
     
     const[navOpen, setNavOpen] = useState(false)
     const [isVisible, setIsVisible] = useState(false)
+    console.log(navOpen, props)
 
 
     useEffect(()=>{
@@ -25,30 +26,100 @@ export function Navbar(props){
         <>
         {props.isMobile ? (
         <>
-            <nav className="responsive-nav-mobile" style={{opacity: isVisible ? 0 : 1}} >
-                <ul className={navOpen ? 'active' : ''}  >
+            <nav className="responsive-nav-mobile" style={{visibility: isVisible ? 'visible' : 'hidden', height: isVisible ? '10%' : '0%'}}  >
+                <ul className="container" >
                     <li className="left">
                         <ul>
-                        <li className="logo"
+                        <li className="logo pulse"
                             onClick={() => {
-                                setNavOpen(!navOpen)
+                                setNavOpen(true)
                             }}>
                                 <div className="logo-container" height="40px" width="40px">
                                         LW
                                 </div>
+                            </li>
+                            <li className="divider">
+                                <div></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="right">
+                        <ul>
+                            <li className="icon">
+
                             </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <nav className="responsive-nav-mobile-full" style={{left: navOpen ? "0" : "-100%", pointerEvents: navOpen ? "auto" : "none"}}>
+            
+                
                 <ul>
-                    <li onClick={()=>{
-                        setNavOpen(!navOpen);
-                    }} className="exit-icon">
-                        <h1>X</h1>
+                    <li className="logo" onClick={()=>{
+                        setNavOpen(false);
+                    }}>
+                        <div className="logo-container" height="40px" width="40px">
+                                                X
+                        </div>
+                    </li>
+                    
+                    <li>
+                            <AnchorLink
+                            href="#header"
+                            className={props.activeRef === 0 ? "anchor active" : "anchor"}>
+                                <div>
+                                    Home
+                                </div>
+                            </AnchorLink>
+                    </li>
+                    <li>
+                        
+                            <AnchorLink
+                            href="#about"
+                            className={props.activeRef === 1 ? "anchor active" : "anchor"}>
+                                <div>
+                                About
+                                </div>
+                            </AnchorLink>
+                        
+                    </li>
+                    <li>
+                        
+                            <AnchorLink
+                            href="#skills"
+                            className={props.activeRef === 2 ? "anchor active" : "anchor"}>
+                                <div>
+                                    Skills
+                                </div>
+                            </AnchorLink>
+                        
+                    </li>
+                    <li>
+                        
+                            <AnchorLink
+                            href="#projects"
+                            className={props.activeRef === 3 ? "anchor active" : "anchor"}>
+                                <div>
+                                    Projects
+                                </div>
+                            </AnchorLink>
+                        
+                    </li>
+                    <li>
+                        
+                            <AnchorLink
+                            offset="50"
+                            href="#contact"
+                            className={props.activeRef === 4 ? "anchor active" : "anchor"}>
+                                <div>
+                                    Contact
+                                </div>
+                            </AnchorLink>
+                        
                     </li>
                 </ul>
+                
             </nav>
         
         </>

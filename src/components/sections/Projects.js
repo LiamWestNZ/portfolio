@@ -42,7 +42,7 @@ const Projects = (props) => {
 
                 <ProjectCard
                     title={"Harry and Sam management app"}
-                    description={"The H&S management app is a appointment application and management web application built for the Harry and Sam dog grooming botique in Gisborne."}
+                    description={"The H&S management app is a pet grooming management web app."}
                     full={"The Harry and Sam management app is a web application I am building for a dog grooming botique in Gisborne. I initially started this application during an IT internship with them"
                     + " The app was initially a google apps script connected to Google Calander and Google form. I have to plans to this idea into a fully fleshed out SaaS in the near future"}
                     github={{frontend: "https://github.com/LiamWestNZ/HarryAndSam-Frontend", backend: "https://github.com/LiamWestNZ/HS-Backend-Public"}}

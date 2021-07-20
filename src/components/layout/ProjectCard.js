@@ -44,19 +44,21 @@ export function ProjectCard(props){
                         <div className="image-wrapper" style={{backgroundColor: bgColor}}>
                             {image === 'Litter.' ? 'Litter.' :  <img src={image} height="200px" width="200px"></img>}
                         </div>
+                        
                     </div>
                     <div className="content">
                             <div className="title">{title}</div>
                             <div className="description">{description}</div>
-                        
-                    </div>
-                </div>
-                View More!
-                <ul className="tags">
+                            <ul className="tags">
                             {tags.map((tag, index) => (
                                 <li key={index}>{tag}</li>
                             ))}
                         </ul>
+                        
+                    </div>
+                </div>
+                View More!
+               
             </div>
         </li>
         )

@@ -4,7 +4,7 @@ import ContactIconWrapper from '../layout/ContactIconWrapper';
 import ContactIcon from '../layout/ContactIcon';
 
 
-import { SendMailIcon, LinkedInIcon, GithubIcon, EmailIcon} from '../../util/image';
+import {DownloadIcon, SendMailIcon, LinkedInIcon, GithubIcon, EmailIcon} from '../../util/image';
 import {encode} from '../../util/index';
 
 
@@ -21,6 +21,14 @@ export function Contact(props){
                     <div className="title">
                         <h1>Contact me</h1>
                         <ContactIconWrapper>
+
+                        <ContactIcon
+                                href="public\pdf\liam-west-cahill-cv.pdf"
+                                string="My CV"
+                                title="View my CV"
+                                isMobile={props.isMobile}>
+                                <DownloadIcon/>
+                            </ContactIcon>
 
                             <ContactIcon
                                 href="mailto:me@liamwest.co.nz"
@@ -52,7 +60,7 @@ export function Contact(props){
                         id="contactForm"
                         className="contact"
                         method="POST"
-                        data-netlily="true"
+                        data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         onSubmit={(e)=>{
                             e.preventDefault();
