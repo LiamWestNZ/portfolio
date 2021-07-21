@@ -23,7 +23,7 @@ export function Contact(props){
                         <ContactIconWrapper>
 
                         <ContactIcon
-                                href="public\pdf\liam-west-cahill-cv.pdf"
+                                href="\pdf\liam-west-cahill-cv.pdf"
                                 string="My CV"
                                 title="View my CV"
                                 isMobile={props.isMobile}>
