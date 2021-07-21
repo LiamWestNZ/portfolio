@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { DownloadIcon, EmailIcon, LinkedInIcon } from '../../util/image';
+import ContactIcon from './ContactIcon';
+
+
 
 
 import './Navbar.scss';
@@ -46,7 +50,29 @@ export function Navbar(props){
                     <li className="right">
                         <ul>
                             <li className="icon">
+                                <ContactIcon
+                                href="\pdf\liam-west-cahill-cv.pdf"
+                                title="My CV"
+                                isMobile={true}>
+                                    <DownloadIcon/>
+                                </ContactIcon>
 
+                            </li>
+                            <li>
+                                <ContactIcon
+                                    href="mailto:me@liamwest.co.nz"
+                                    title="My Email"
+                                    isMobile="true">
+                                        <EmailIcon/>
+                                </ContactIcon>
+                            </li>
+                            <li>
+                                <ContactIcon
+                                    href="https://www.linkedin.com/in/liam-west-cahill-03765717a/"
+                                    title="My LinkedIn"
+                                    isMobile="true">
+                                        <LinkedInIcon/>
+                                </ContactIcon>
                             </li>
                         </ul>
                     </li>
@@ -144,6 +170,7 @@ export function Navbar(props){
                                     Liam West
                                 </div>
                             </li>
+                            
                         </ul>
                     </li>
                     <li classNmae="right">

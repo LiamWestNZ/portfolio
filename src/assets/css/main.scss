@@ -583,6 +583,18 @@ main{
                     border-radius: 25px;
                     height: 400px;
                     transition: all .3s;
+                    cursor: pointer;
+                    .viewmore{
+                      color: white;
+                      background-color: $blue;
+                      border-radius: 10px;
+                      width: 100px;
+                      height: 40px;
+                      font-weight: bold;
+                      text-align: center;
+                      padding-top: 10px;
+                      float: right;
+                    }
                     @media screen and (min-width: $large){
                       .item-wrapper{
                         .image{
@@ -643,13 +655,18 @@ main{
                     }
                     @include ease-in-out(200ms);
                     &:hover {
-                        .image{
-                            .image-container {
-                                img {
-                                    transform: scale(1.05);
-                                    filter: greyscale(0);
-                                }
+                        .item-wrapper{
+                          .image{
+                            .image-wrapper{
+                              font-size: +500%;
+                              img{
+                                transform: scale(1.2);
+                              }
                             }
+                          }
+                        }
+                        .viewmore{
+                          transform: translateY(10px);
                         }
                     }
                     .item-wrapper{

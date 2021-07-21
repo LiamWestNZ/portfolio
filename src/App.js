@@ -5,6 +5,7 @@ import {Canvas} from '@react-three/fiber';
 import {Html} from '@react-three/drei';
 import Content from './components/layout/Content'
 import { calcPercent, debounce } from "./util";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import './App.scss';
 import Stars from './components/layout/Hero'
@@ -97,7 +98,6 @@ export function HeaderContent(props){
     
       <Html fullscreen>
         <section id="header" className="header">
-          <Content>
             <div className="splash">
                     <div className="splash-logo">
                         LW
@@ -109,16 +109,20 @@ export function HeaderContent(props){
                     
                     </div>
                     <div className="splash-minimize">
-                        <svg width="0%" height="0%">
-                        <rect width="0%" height="0%"></rect>
+                        <svg width="100%" height="100%">
+                        <rect width="100%" height="100%"></rect>
                         </svg>
                     </div>
                 </div>
                 <div className="text" style={{top: `${isTop}px`}}>
-                    <p>Hi my name is Liam.</p>
-                    <p>I'm a fullstack developer and IT specialist</p>
+                    <p>Liam West</p>
+                    <p>IT and Dev</p>
+                    <AnchorLink href="#contact">
+                      <button>
+                        Contact Me
+                      </button>
+                    </AnchorLink>
                 </div>
-                </Content>
               </section>
           </Html>
         

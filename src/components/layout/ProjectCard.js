@@ -57,7 +57,7 @@ export function ProjectCard(props){
                         
                     </div>
                 </div>
-                View More!
+                <p className="viewmore">View More!</p>
                
             </div>
         </li>
