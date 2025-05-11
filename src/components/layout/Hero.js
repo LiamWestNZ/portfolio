@@ -12,8 +12,8 @@ export function Stars(){
     let group = useRef()
     let theta = 0
     useFrame(() => {
-        const r = 5 * Math.sin(THREE.Math.degToRad((theta += 0.1)))
-        const s = Math.cos(THREE.Math.degToRad(theta * 2))
+        const r = 5 * Math.sin(THREE.MathUtils.degToRad((theta += 0.1)))
+        const s = Math.cos(THREE.MathUtils.degToRad(theta * 2))
         group.current.rotation.set(r, r, r)
         group.current.scale.set(s, s, s)
     })
