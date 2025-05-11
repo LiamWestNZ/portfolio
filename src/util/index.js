@@ -31,38 +31,38 @@ export const frontendSkills = [
     {
         src: htmlLogo,
         title: "HTML5",
-        list: ['Hyper Text Markup Language.','4+ years experience.','Web page markup.']
+        list: ['Hyper Text Markup Language.','4+ prof. experience.']
     },
     {
         src: cssLogo,
         title: "CSS",
-        list: ['Cascading Style Sheets.','4+ years experience.','Animations.',]
+        list: ['Cascading Style Sheets.','4+ prof. years experience.']
     },
     {
         src: sassLogo,
         title: "SASS/SCSS",
-        list: ['Syntactically Awesome Style Sheets.','1+ years experience.','Functions.','Mixins.','Nesting.']
+        list: ['Syntactically Awesome Style Sheets.','4+ years prof experience.']
     },
     {
         src: javascriptLogo,
         title: "JavaScript",
-        list: ['3+ years experience.', 'frameworks.',{icon: typescriptLogo, name: 'Comfortable with TypeScript'}]
+        list: ['4+ years experience.', 'frameworks.',{icon: typescriptLogo, name: '4+ prof. experience with TypeScript'}]
     },{
         src: reactLogo,
         title: "React.js",
-        list: ['JavaScript library.','2+ years experience.','Class/functional Components.','Hooks.','Redux/State.']
+        list: ['JavaScript library.','4+ years prof. experience.']
     }]
     
 export const backendSkills = [
     {
         src: phpLogo,
         title: 'PHP',
-        list: ['PHP: Hypertext Preprocessor.','2+ years experience.','Backend.',{icon: laravelLogo, name: 'Laravel'}]
+        list: ['PHP: Hypertext Preprocessor.','4+ years prof experience.','Backend.',{icon: laravelLogo, name: '4+ years prof. experience'}]
     },
     {   
         src: pythonLogo,
         title: 'Python',
-        list: ['4+ years experience.','Backend.','Data.','Scripting.',{icon: djangoLogo, name:'Django'},{icon: flaskLogo, name: 'Flask'}]
+        list: ['4+ prof. years experience.','Backend.','Data.','Scripting.',{icon: djangoLogo, name:'Django'},{icon: flaskLogo, name: 'Flask'}]
     },
     {
         src: csharpLogo,
@@ -88,17 +88,17 @@ export const platformSkills = [
     {
         src: githubLogo,
         title: 'GitHub',
-        list: ['Git open source platform.','2 years experience.','open source.','pull requests.']
+        list: ['Git open source platform.','4+ prof. years experience.']
     },
     {
         src: awsLogo,
         title:'Amazon Web Services',
-        list: ['Cloud Computing Platform.','1+ years experience.','EC2.','Lambda.','Beanstalk.','S3.']
+        list: ['Cloud Computing Platform.','4+ prof years experience.','EC2.','Lambda.','Step Functions.','S3.']
     },
     {
         src: gasLogo,
         title: "Google Apps Suite",
-        list: ['Developmetn using Googles App suite.','ES5 JavaScript.','1+ years experience.']
+        list: ['Development using Googles App suite.','ES5 JavaScript.','2+ years experience.']
     },
     {
         src: linuxLogo,

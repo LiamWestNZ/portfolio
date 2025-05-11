@@ -15,20 +15,11 @@ const About = (props) => {
             <Content>
                 <h1>About me</h1>
                 <p id="intro">
-                    Hi, I'm Liam. I'm an IT graduate that has a profound passion for web development.
-                    I first started programming during my degree. To be honest I REALLY struggled with it as a whole, and without the help
-                    of my peers and lecturers, I would have failed the class. Despite the stress and confusion I experienced learning to code,
-                    I couldn't rebuff the sense of accomplishment I got when the applications I was required to make for assignments worked
-                    on my own accord. That following holidays I got a copy of "Automate the boring stuff" and "Python Crash Course" and dedicate
-                    a few hours a day learning Python.
+                    Hi, I'm Liam. I'm a professional web developer/software engineer who has been working since 2021. I have a keen passion for tech, while initially going down a 
+                    traditional IT route, I become interested in programming during the introductry programming courses of my degree. Truthly, I really struggled with it initially,
+                    but my willingess to learn and overcome the challenges I faced. The following holidays of my graduation I picked up a copy of 'Automate the boring things' and the rest was history.
 
                 </p>
-                <p id="next">
-                    Fast forward to today, I've since graduated and I am still continuing my daily learning, while developing some web applications
-                    in my spare time.
-
-                </p>
-                
             </Content>
         </section>
     )

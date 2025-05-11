@@ -115,8 +115,8 @@ export function HeaderContent(props){
                     </div>
                 </div>
                 <div className="text" style={{top: `${isTop}px`}}>
-                    <p>Liam West</p>
-                    <p>IT and Dev</p>
+                    <p>Liam West-Cahill</p>
+                    <p>Professional Web Developer</p>
                     <AnchorLink href="#contact">
                       <button>
                         Contact Me
