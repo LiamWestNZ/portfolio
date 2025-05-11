@@ -51,7 +51,7 @@ export function Navbar(props){
                         <ul>
                             <li className="icon">
                                 <ContactIcon
-                                href="\pdf\liam-west-cahill-cv.pdf"
+                                href="\pdf\lwc-cv.pdf"
                                 title="My CV"
                                 isMobile={true}>
                                     <DownloadIcon/>

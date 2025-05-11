@@ -23,7 +23,7 @@ export function Contact(props){
                         <ContactIconWrapper>
 
                         <ContactIcon
-                                href="\pdf\liam-west-cahill-cv.pdf"
+                                href="\pdf\lwc-cv.pdf"
                                 string="My CV"
                                 title="View my CV"
                                 isMobile={props.isMobile}>
@@ -31,7 +31,7 @@ export function Contact(props){
                             </ContactIcon>
 
                             <ContactIcon
-                                href="mailto:me@liamwest.co.nz"
+                                href="mailto:liamwc1@gmail.com"
                                 string="Email me"
                                 title="Send an email to me."
                                 isMobile={props.isMobile}>
