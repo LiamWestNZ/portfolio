@@ -17,6 +17,13 @@ export function Contact(props){
     return (
         <section id="contact" className="contact" ref={props.contactRef}>
             <Content>
+            <div style={{position: 'relative', bottom: '-300px', left: '20%', color: '#5680E9'}}>
+                <h1>Out of order due to host migration,
+                        Please email me at liamwc1@gmail.com for contact
+                    </h1>
+                </div>
+                <div style={{color: 'darkgrey', opacity: '20%'}}>
+                    
                 <div className="form-wrapper">
                     <div className="title">
                         <h1>Contact me</h1>
@@ -120,8 +127,8 @@ export function Contact(props){
                             </button>
                     </form>
                 </div>
+                </div>
             </Content>
-
         </section>
     )
 }
