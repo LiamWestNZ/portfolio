@@ -4,7 +4,8 @@ import Modal from './components/layout/Modal'
 import About from './components/sections/About';
 import Skills from './components/sections/Skills'
 import Portfolio from './components/sections/Projects';
-import Contact from './components/sections/Contact';  
+import Contact from './components/sections/Contact';
+import Employment from './components/sections/Employment';
 
 import {debounce, isInViewport} from './util/index'
 

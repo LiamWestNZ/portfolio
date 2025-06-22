@@ -114,9 +114,9 @@ export function HeaderContent(props){
                         </svg>
                     </div>
                 </div>
-                <div className="text" style={{top: `${isTop}px`}}>
+                <div className="text" style={{top: `${isTop}px`, left: '33%', width: '50%'}}>
                     <p>Liam West-Cahill</p>
-                    <p>Professional Web Developer</p>
+                    <p>IT Professional</p>
                     <AnchorLink href="#contact">
                       <button>
                         Contact Me
